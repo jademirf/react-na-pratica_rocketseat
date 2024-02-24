@@ -5,7 +5,7 @@ import {
   ChevronsRight,
 } from 'lucide-react'
 
-import { useSearchParams } from 'react-router-dom'
+// import { useSearchParams } from 'react-router-dom'
 import { Button } from './ui/button'
 import { Select, SelectContent, SelectItem, SelectTrigger } from './ui/select'
 
@@ -16,14 +16,14 @@ interface PaginationProps {
 }
 
 export function Pagination({ items, page, pages }: PaginationProps) {
-  const [, setSearchParams] = useSearchParams()
+  // const [, setSearchParams] = useSearchParams()
 
   function firstPage() {
-    setSearchParams(params => {
-      params.set('page', '1')
+    // setSearchParams(params => {
+    //   params.set('page', '1')
 
-      return params
-    })
+    //   return params
+    // })
   }
 
   function previousPage() {
@@ -31,11 +31,11 @@ export function Pagination({ items, page, pages }: PaginationProps) {
       return
     }
 
-    setSearchParams(params => {
-      params.set('page', String(page - 1))
+    // setSearchParams(params => {
+    //   params.set('page', String(page - 1))
 
-      return params
-    })
+    //   return params
+    // })
   }
 
   function nextPage() {
@@ -43,19 +43,19 @@ export function Pagination({ items, page, pages }: PaginationProps) {
       return
     }
 
-    setSearchParams(params => {
-      params.set('page', String(page + 1))
+    // setSearchParams(params => {
+    //   params.set('page', String(page + 1))
 
-      return params
-    })
+    //   return params
+    // })
   }
 
   function lastPage() {
-    setSearchParams(params => {
-      params.set('page', String(pages))
+    // setSearchParams(params => {
+    //   params.set('page', String(pages))
 
-      return params
-    })
+    //   return params
+    // })
   }
 
   return (
